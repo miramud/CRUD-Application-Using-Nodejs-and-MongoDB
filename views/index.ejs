@@ -1,0 +1,37 @@
+
+<!-- HEADER -->
+<%- include('include/header') %> 
+<!-- /HEADER -->
+
+<!-- MAIN SITE -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add" class="border-shadow">
+                <span class="gradient-text"><i class="fas fa-user-plus"></i></span>
+            </a>
+        </div>
+
+        <!-- form handling -->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="dark-thead">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>@Email</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <%- include('include/display_users') %> 
+            </table>
+        </form>
+    </div>
+</main>
+<!-- /MAIN SITE -->
+
+<!-- FOOTER -->
+<%- include('include/footer') %> 
+<!-- /FOOTER -->

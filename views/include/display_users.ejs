@@ -1,0 +1,19 @@
+<tbody>
+    <% users.forEach((userData,index)=>{%> 
+    <tr>
+        <td><%= index + 1 %> </td>
+        <td><%= userData.name %> </td>
+        <td><%= userData.email %></td>
+        <td><%= userData.gender %></td>
+        <td><%= userData.status %></td>
+        <td>
+            <a href="/update?id=<%= userData._id %>" class="btn border-shadow update">
+                <span class="gradient-text"><i class="fas fa-user-edit"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%= userData._id %> >
+                <span class="danger-text"><i class="fas fa-user-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% }) %> 
+</tbody>
